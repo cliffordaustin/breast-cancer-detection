@@ -51,9 +51,8 @@ pillow==11.0.0
 pip-autoremove==0.10.0
 platformdirs==2.2.0
 protobuf==5.28.3
-psycopg==3.1.8
-psycopg-binary==3.1.8
-psycopg2-binary==2.9.10
+psycopg==3.2.3
+psycopg-binary==3.2.3
 pycparser==2.21
 Pygments==2.18.0
 PyJWT==2.8.0
