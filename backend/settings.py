@@ -30,7 +30,7 @@ SECRET_KEY = env.str("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = env.bool("DEBUG")
 
-ALLOWED_HOSTS = [".vercel.app"]
+ALLOWED_HOSTS = ["django-env.eba-psp8wtxz.us-west-2.elasticbeanstalk.com"]
 
 RENDER_EXTERNAL_HOSTNAME = env.str("RENDER_EXTERNAL_HOSTNAME", default=None)
 if RENDER_EXTERNAL_HOSTNAME:
