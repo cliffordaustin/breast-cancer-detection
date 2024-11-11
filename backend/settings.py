@@ -23,7 +23,6 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = env.str("SECRET_KEY")
 
-# SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = env.bool("DEBUG")
 
 ALLOWED_HOSTS = ["Cnn-idc-detector-env.eba-cypachkg.us-west-2.elasticbeanstalk.com"]
