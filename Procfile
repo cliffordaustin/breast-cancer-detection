@@ -1,0 +1,1 @@
+web: python3 -m pip install --no-cache-dir tensorflow-cpu==2.18.0 && python app.py
