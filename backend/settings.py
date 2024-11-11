@@ -101,7 +101,7 @@ TEMPLATES = [
     },
 ]
 
-CORS_ALLOW_ORIGINS = [
+CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
     "https://breast-cancer-detection-frontend.vercel.app/",
 ]
