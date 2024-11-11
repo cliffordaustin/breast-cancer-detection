@@ -17,7 +17,6 @@ class MakePredictionView(APIView):
             image = image.read()
             model_path = os.path.join(os.getcwd(), "model.h5")
             prediction = predict_breast_cancer(image, model_path)
-            # Process the image and perform prediction
 
             return Response({"prediction": prediction}, status=200)
         else:
