@@ -109,6 +109,8 @@ ENV/
 env.bak/ 
 venv.bak/ 
 
+static/.well-known/pki-validation/A2CA7BA8E8B33D1FC45CB4BCB80E6DE3.txt
+
 # mkdocs documentation 
 /site 
 
