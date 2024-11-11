@@ -101,10 +101,7 @@ TEMPLATES = [
     },
 ]
 
-CORS_ALLOW_ORIGINS = [
-    "http://localhost:3000",
-    "https://breast-cancer-detection-frontend.vercel.app/",
-]
+CORS_ALLOW_ALL_ORIGINS = True
 
 WSGI_APPLICATION = "backend.wsgi.application"
 
