@@ -1,1 +1,0 @@
-web: source /var/app/venv/*/bin/activate && python3.12 -m pip install --no-cache-dir tensorflow-cpu==2.18.0 && python app.py
