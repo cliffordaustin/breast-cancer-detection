@@ -25,7 +25,10 @@ SECRET_KEY = env.str("SECRET_KEY")
 
 DEBUG = env.bool("DEBUG")
 
-ALLOWED_HOSTS = ["Cnn-idc-detector-env.eba-cypachkg.us-west-2.elasticbeanstalk.com"]
+ALLOWED_HOSTS = [
+    "localhost",
+    "Cnn-idc-detector-env.eba-cypachkg.us-west-2.elasticbeanstalk.com",
+]
 
 RENDER_EXTERNAL_HOSTNAME = env.str("RENDER_EXTERNAL_HOSTNAME", default=None)
 if RENDER_EXTERNAL_HOSTNAME:
@@ -154,7 +157,8 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
-STATIC_URL = "/static/"
+STATIC_URL = "/static/"  # Path for serving static files
+STATIC_ROOT = os.path.join(BASE_DIR, "static")  #
 
 
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")

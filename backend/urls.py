@@ -13,11 +13,26 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+
 from django.contrib import admin
 from django.urls import path
 from django.urls import path, include, re_path
 from django.conf import settings
 from django.conf.urls.static import static
+from django.views import View
+import os
+from django.http import FileResponse
+
+
+class VerificationFileView(View):
+    def get(self, request, *args, **kwargs):
+        file_path = os.path.join(
+            settings.STATIC_ROOT,
+            ".well-known",
+            "pki-validation",
+            "A2CA7BA8E8B33D1FC45CB4BCB80E6DE3.txt",
+        )
+        return FileResponse(open(file_path, "rb"))
 
 
 urlpatterns = [
@@ -29,4 +44,12 @@ urlpatterns = [
     path("api/v1/rest-auth/password/change/", include("dj_rest_auth.urls")),
     path("api/v1/rest-auth/logout/", include("dj_rest_auth.urls")),
     path("accounts/", include("allauth.urls")),
+    path(
+        ".well-known/pki-validation/A2CA7BA8E8B33D1FC45CB4BCB80E6DE3.txt",
+        VerificationFileView.as_view(),
+        name="pki-validation",
+    ),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+if settings.DEBUG:
+    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
