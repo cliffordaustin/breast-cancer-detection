@@ -27,10 +27,9 @@ DEBUG = env.bool("DEBUG")
 
 ALLOWED_HOSTS = [
     "localhost",
-    "Cnn-idc-detector-env.eba-cypachkg.us-west-2.elasticbeanstalk.com",
+    "cnn-idc-detector-env.eba-cypachkg.us-west-2.elasticbeanstalk.com",
     "54.214.235.124",
     "127.0.0.1",
-    "https://breast-cancer-detection-frontend.vercel.app/",
 ]
 
 RENDER_EXTERNAL_HOSTNAME = env.str("RENDER_EXTERNAL_HOSTNAME", default=None)
@@ -102,7 +101,10 @@ TEMPLATES = [
     },
 ]
 
-CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOW_ORIGINS = [
+    "http://localhost:3000",
+    "https://breast-cancer-detection-frontend.vercel.app/",
+]
 
 WSGI_APPLICATION = "backend.wsgi.application"
 
