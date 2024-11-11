@@ -29,6 +29,7 @@ ALLOWED_HOSTS = [
     "localhost",
     "Cnn-idc-detector-env.eba-cypachkg.us-west-2.elasticbeanstalk.com",
     "54.214.235.124",
+    "127.0.0.1",
     "https://breast-cancer-detection-frontend.vercel.app/",
 ]
 
