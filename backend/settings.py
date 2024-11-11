@@ -28,6 +28,7 @@ DEBUG = env.bool("DEBUG")
 ALLOWED_HOSTS = [
     "localhost",
     "Cnn-idc-detector-env.eba-cypachkg.us-west-2.elasticbeanstalk.com",
+    "54.214.235.124",
 ]
 
 RENDER_EXTERNAL_HOSTNAME = env.str("RENDER_EXTERNAL_HOSTNAME", default=None)
